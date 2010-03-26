@@ -3,7 +3,7 @@
  * Licensed under GNU's GPL 2, see README
  */
  
-// Taken from: http://github.com/ctrlaltdel/TahoeLAFS-android
+// Taken from: http://github.com/ctrlaltdel/TahoeLAFS-android (Public Domain)
 
 package info.lamatricexiste.network.Utils;
 

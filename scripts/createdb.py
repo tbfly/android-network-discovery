@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+
 '''
  Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
  Licensed under GNU's GPL 2, see README
 '''
-#!/usr/bin/env python
+
 import sqlite3
 import os
 import urllib
