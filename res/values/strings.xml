@@ -14,7 +14,9 @@
     <string name="btn_scan">Scan</string>
     <string name="btn_options">Options</string>
     <string name="btn_back">Back</string>
- 
+    <string name="btn_info">Info</string>
+    <string name="btn_ports">Ports</string>
+     
     <string name="package_missing">%s must be installed from the market !</string>
     
     <string name="wifi_enabled">Wifi is enabled</string>

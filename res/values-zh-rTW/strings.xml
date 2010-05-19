@@ -15,7 +15,9 @@
     <string name="btn_scan">掃瞄</string>
     <string name="btn_options">選項</string>
     <string name="btn_back">返回</string>
- 
+    <string name="btn_info">信息</string>
+    <string name="btn_ports">港口</string>
+         
     <string name="package_missing">必須從市場上安裝 %s ！</string>
     
     <string name="wifi_enabled">Wifi 已開啟</string>
