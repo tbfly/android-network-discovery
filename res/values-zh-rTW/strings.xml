@@ -68,7 +68,7 @@
     <string name="help_portscan_title">通訊埠掃瞄</string>
     <string name="help_portscan_content">通訊埠掃瞄是事件驅動，使用JAVA選取器和Socket通道。\n在以毫秒為單位的時間註冊Socket建立時會產生一個假逾時，會定期檢查它。\n通訊埠掃瞄方式，如發掘，使用完全的TCP連接掃瞄。(將來結合root功能將有更多的粒度連接。)\n\n同一時間最多能有127個Sockets通信進程，所以這並不總是精確的，但是很快。同樣的，將來會有一個新功能以適應要求發出以及主機響應之間的時間時間(網路擁擠控制類別軟體)\n\n當TCP連接是成功的，則認為通訊埠是開放的；而當監聽結束時仍未發現任何服務或者過濾器逾時則認為通訊埠是關閉的。</string>
     <string name="help_links_title">連結</string>
-    <string name="help_links_content">- 掃瞄 TCP 連接：http://nmap.org/book/man-port-scanning-techniques.html#id421401\n\n- 主機發掘：http://nmap.org/book/man-host-discovery.html</string>
+    <string name="help_links_content">- 掃瞄 TCP 連接：http://nmap.org/book/man-port-scanning-techniques.html#id421401\n\n- 主機發掘：http://nmap.org/book/man-host-discovery.html\n\n- 安智網中文化 (http://goapk.com)</string>
     
     <string name="preferences_help">說明</string>
     <string name="preferences_notifications">通知設定</string>

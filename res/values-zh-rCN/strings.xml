@@ -68,7 +68,7 @@
     <string name="help_portscan_title">端口扫描</string>
     <string name="help_portscan_content">端口扫描是事件驱动，使用JAVA选择器和Socket通道。\n在以毫秒为单位的时间注册Socket创建时会产生一个假超时，会定期检查它。\n端口扫描方式，如发掘，使用完全的TCP连接扫描。(将来结合root功能将有更多的粒度连接。)\n\n同一时间最多能有127个Sockets通信进程，所以这并不总是精确的，但是很快。同样的，将来会有一个新功能以适应请求发出以及主机响应之间的时间时间(网络拥挤控制类软件)\n\n当TCP连接是成功的，则认为端口是开放的；而当监听结束时仍未发现任何服务或者过滤器超时则认为端口是关闭的。</string>
     <string name="help_links_title">链接</string>
-    <string name="help_links_content">- 扫描 TCP 连接：http://nmap.org/book/man-port-scanning-techniques.html#id421401\n\n- 主机发掘：http://nmap.org/book/man-host-discovery.html</string>
+    <string name="help_links_content">- 扫描 TCP 连接：http://nmap.org/book/man-port-scanning-techniques.html#id421401\n\n- 主机发掘：http://nmap.org/book/man-host-discovery.html\n\n- 安智网汉化（http://goapk.com)</string>
     
     <string name="preferences_help">帮助</string>
     <string name="preferences_notifications">通知设置</string>
