@@ -2,9 +2,10 @@
  * Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
  * Licensed under GNU's GPL 2, see README
  */
- 
+
 package info.lamatricexiste.network.Utils;
 
+import info.lamatricexiste.network.DiscoverActivity;
 import info.lamatricexiste.network.R;
 
 import java.io.IOException;
@@ -113,7 +114,7 @@ public class UpdateNicDb extends AsyncTask<Void, String, Void> {
         try {
             Editor edit = prefs.edit();
             edit.putInt(Prefs.KEY_RESETDB, ctxt.getPackageManager().getPackageInfo(
-                    "info.lamatricexiste.network", 0).versionCode);
+                    DiscoverActivity.TAG, 0).versionCode);
             edit.commit();
         } catch (NameNotFoundException e) {
             Log.e(TAG, e.getMessage());

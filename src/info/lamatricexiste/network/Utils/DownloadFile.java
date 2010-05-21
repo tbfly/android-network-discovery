@@ -2,7 +2,7 @@
  * Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
  * Licensed under GNU's GPL 2, see README
  */
- 
+
 // Taken from: http://github.com/ctrlaltdel/TahoeLAFS-android (Public Domain)
 
 package info.lamatricexiste.network.Utils;
@@ -88,7 +88,7 @@ public class DownloadFile {
 
     private static void fastChannelCopy(final ReadableByteChannel src,
             final WritableByteChannel dest) throws IOException {
-        if (src != null) {
+        if (src != null && dest != null) {
             final ByteBuffer buffer = ByteBuffer.allocateDirect(16 * 1024);
             while (src.read(buffer) != -1) {
                 // prepare the buffer to be drained

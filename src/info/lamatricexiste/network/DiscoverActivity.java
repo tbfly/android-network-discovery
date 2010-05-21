@@ -2,7 +2,7 @@
  * Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
  * Licensed under GNU's GPL 2, see README
  */
- 
+
 package info.lamatricexiste.network;
 
 import info.lamatricexiste.network.HostDiscovery.DiscoveryUnicast;
@@ -29,6 +29,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.database.sqlite.SQLiteDatabaseCorruptException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.SupplicantState;
@@ -36,6 +37,7 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -51,7 +53,7 @@ import android.widget.Toast;
 
 final public class DiscoverActivity extends Activity {
 
-    private final String TAG = "info.lamatricexiste.network";
+    public static final String TAG = "info.lamatricexiste.network";
     // private final int DEFAULT_DISCOVER = 1;
     public final static long VIBRATE = (long) 250;
     public final static int SCAN_PORT_RESULT = 1;
@@ -429,7 +431,14 @@ final public class DiscoverActivity extends Activity {
         if (!hardwareAddressAlreadyExists(haddr)) {
             HostBean host = new HostBean();
             host.hardwareAddress = haddr;
-            host.nicVendor = mHardwareAddress.getNicVendor(ctxt, haddr);
+            try {
+                host.nicVendor = mHardwareAddress.getNicVendor(ctxt, haddr);
+            } catch (SQLiteDatabaseCorruptException e) {
+                Log.e(TAG, e.getMessage());
+                Editor edit = prefs.edit();
+                edit.putInt(Prefs.KEY_RESETDB, 10);
+                edit.commit();
+            }
             host.ipAddress = addr;
             host.position = hosts.size();
             if (prefs.getBoolean(Prefs.KEY_RESOLVE_NAME, Prefs.DEFAULT_RESOLVE_NAME) == true) {

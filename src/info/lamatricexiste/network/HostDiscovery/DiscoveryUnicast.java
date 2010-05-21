@@ -2,7 +2,7 @@
  * Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
  * Licensed under GNU's GPL 2, see README
  */
- 
+
 package info.lamatricexiste.network.HostDiscovery;
 
 import info.lamatricexiste.network.DiscoverActivity;
@@ -167,7 +167,9 @@ public class DiscoveryUnicast extends AsyncTask<Void, String, Void> {
                 discover.addHost(item[0]);
             }
             hosts_done++;
-            discover.setProgress((int) (hosts_done * 10000 / size));
+            if (discover != null) {
+                discover.setProgress((int) (hosts_done * 10000 / size));
+            }
         }
     }
 
